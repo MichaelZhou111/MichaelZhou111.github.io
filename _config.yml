@@ -2,7 +2,7 @@
 title: Michael Zhou's Blog
 subtitle: 一个测试行业从业人员的点滴感悟
 welcome_message: <a href="https://github.com/MichaelZhou111?tab=stars" target="_blank">My Stars</a>
-description: 测试开发 接口自动化测试 服务端测试
+description: 测试开发 接口自动化测试 自动化测试框架开发
 creator: <a href="http://onev.cat">@onevcat</a>
 
 url: "http://vno.onevcat.com"
@@ -21,8 +21,8 @@ blog_button:
     description: Visit blog
 
 # Navigation buttons in the front page.
-nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+#nav:
+    #- {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
@@ -32,16 +32,16 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: vno-jekyll
+    disqus: michaelzhou111
     # duoshuo: 
     
 # Social
 social:
-    weibo: onevcat
-    github: onevcat
-    twitter: onevcat
-    gplus: 107108267983477358170
-    mail: onev@onevcat.com
+    #weibo: onevcat
+    #github: onevcat
+    #twitter: onevcat
+    #gplus: 107108267983477358170
+    mail: zhouzhiping@jd.com
 
 # Google Analytics
 ga:
