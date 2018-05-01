@@ -6,6 +6,12 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
 
 ### OSX ###
 .DS_Store

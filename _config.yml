@@ -1,8 +1,8 @@
 # Basic
-title: Vno Jekyll
-subtitle: A blog-orientation theme for Jekyll
-welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: Vno Jekyll is a port of my Ghost theme vno.
+title: Michael Zhou's Blog
+subtitle: 一个测试行业从业人员的点滴感悟
+welcome_message: <a href="https://github.com/MichaelZhou111?tab=stars" target="_blank">My Stars</a>
+description: 测试开发 接口自动化测试 服务端测试
 creator: <a href="http://onev.cat">@onevcat</a>
 
 url: "http://vno.onevcat.com"
