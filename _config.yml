@@ -45,5 +45,5 @@ social:
 
 # Google Analytics
 ga:
-    # id: your_ga_id
-    # host: your_host
+    id: UA-119022278-1
+    host: MyBlog
