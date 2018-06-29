@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 这些概念你不懂的话，你好意思说你懂java？ java8-lambada表达式
+title: 这些概念你不懂的话，你好意思说你懂java?
 date: 2018-06-20 15:32:24.000000000 +09:00
 tags: JAVA 笔记 lambada 函数式编程 闭包
 ---
@@ -18,6 +18,8 @@ tags: JAVA 笔记 lambada 函数式编程 闭包
  但是实际上在代码中看到的函数式接口有包含一个方法的，也有包含多个方法的，这就让我迷茫了。
  例如下面的两个函数式接口：Runnable 和 Consummer:
  <br>Runnable:<br>
+ ![](/images/posts/Runnable.png)
+
  ![Alt text](../assets/images/Runnable.png?raw=true "java.lang.Runnable")
  <br>Consummer:<br>
  ![Alt text](../assets/images/Java.util.function.Consummer.png?raw=true "java.util.function.Consummer")
@@ -28,5 +30,5 @@ tags: JAVA 笔记 lambada 函数式编程 闭包
  Java 8中允许接口实现方法， 而不是简单的声明， 这些方法叫做默认方法，使用特殊的关键字default。
  因为默认方法不是抽象方法，所以不影响我们判断一个接口是否是函数式接口。
  
- 参考链接: [link]: (http://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/ 'Java 8函数式接口functional interface的秘密')
+ >参考链接: [Java 8函数式接口functional interface的秘密](http://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/ 'Java 8函数式接口functional interface的秘密')
  
