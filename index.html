@@ -19,7 +19,13 @@ layout: default
                     <img src="/images/tag-icon.svg" width="20px"/>
                 </div>
 
-                <span id="http://www.cloudchou.com" class="leancloud_visitors meta_data_item" data-flag-title="">
+                <!-- <span class="post-list__meta&#45;&#45;tags tags">{{ post.tags | join:' ' }}</span>-->
+                <a href="/tags">
+                    <div class="post-list-icon-mate">
+                        <span class="post-list__meta--tags-right">{{ post.tags }}</span>
+                    </div>
+
+                    <span id="http://www.cloudchou.com" class="leancloud_visitors meta_data_item" data-flag-title="">
                     <span class="post-meta-item-icon">
                         <span class="octicon octicon-eye"></span>
                     </span>
@@ -28,11 +34,7 @@ layout: default
                     <span class="post-meta-item-text">次浏览</span>
                 </span>
 
-                <!-- <span class="post-list__meta&#45;&#45;tags tags">{{ post.tags | join:' ' }}</span>-->
-                <a href="/tags">
-                    <div class="post-list-icon-mate">
-                        <span class="post-list__meta--tags-right">{{ post.tags }}</span>
-                    </div>
+
                     <div class="post-list-small-mate">
                         <a class="btn-border-small" href={{ post.url }}>阅读全文 »</a>
                     </div>
