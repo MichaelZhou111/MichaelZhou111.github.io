@@ -9,7 +9,10 @@ layout: default
             <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished"
                   class="post-meta__date date">{{page.date | date: "%F"}}
             </time>
-            &#8226; <span class="post-meta__tags tags">{{page.tags | join:' '}}</span>
+            &#8226;
+            <a href="/tags">
+                <span class="post-meta__tags tags">{{page.tags | join:'    '}}</span>
+            </a>
         </div>
 
         <div>
