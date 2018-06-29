@@ -18,11 +18,10 @@ tags: JAVA 笔记 lambada 函数式编程 闭包
  但是实际上在代码中看到的函数式接口有包含一个方法的，也有包含多个方法的，这就让我迷茫了。
  例如下面的两个函数式接口：Runnable 和 Consummer:
  <br>Runnable:<br>
- ![](/images/posts/Runnable.png)
+ ![Runnable](/images/posts/Runnable.png)
 
- ![Alt text](../assets/images/Runnable.png?raw=true "java.lang.Runnable")
  <br>Consummer:<br>
- ![Alt text](../assets/images/Java.util.function.Consummer.png?raw=true "java.util.function.Consummer")
+  ![java.util.function.Consummer](/images/posts/Java.util.function.Consummer.png)
  
  最后才了解了原因在于：函数式接口中除了那个抽象方法外还可以包含静态方法和默认方法。
  Java 8以前的规范中接口中不允许定义静态方法。 静态方法只能在类中定义。 Java 8中可以定义静态方法。
