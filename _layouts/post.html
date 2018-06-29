@@ -12,14 +12,11 @@ layout: default
             &#8226; <span class="post-meta__tags tags">{{page.tags | join:' '}}</span>
         </div>
 
-        {% if site.leancloud.enable %}
         <div>
-  <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
-    Visited:
-    <a href="#"><span class="leancloud-visitors-count"></span>次</a>
-  </span>
+            <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
+                Visited:<a href="#"><span class="leancloud-visitors-count"></span>次</a>
+            </span>
         </div>
-        {% endif %}
 
         <h1 class="post-title">{{ page.title }}</h1>
     </header>

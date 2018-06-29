@@ -4,10 +4,9 @@
         <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 {{ site.time | date: "%F" }} 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
         <span class="footer__copyright">本站{% if site.creator %}由 {{site.creator}} 创建，{% endif %}采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; {{site.time | date: "%Y"}}</span>-->
         <!--访问LeanCloud的js包装脚本-->
-        {% if site.leancloud.enable %}
         <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
         <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-        <script>AV.initialize("{{site.leancloud.app_id}}", "{{site.leancloud.app_key}}");</script>
+        <script>AV.initialize("7f1h6TTDyH8x6gvCG5XV32bi-gzGzoHsz", "9gVoQ5eKkXCrWiRpEC9TI4Q1");</script>
         <script>
             //新增访问次数
             function addCount(Counter) {
@@ -189,6 +188,5 @@
                 }
             });
         </script>
-        {% endif %}
     </footer>
 </section>
