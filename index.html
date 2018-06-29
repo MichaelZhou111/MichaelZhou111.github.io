@@ -17,13 +17,15 @@ layout: default
 
                 <div class="tag-img-icon">
                     <img src="/images/tag-icon.svg" width="20px"/>
+                    <a href="/tags">
+                        <div class="post-list-icon-mate">
+                            <span class="post-list__meta--tags-right">{{ post.tags | join:'  ' }}</span>
+                        </div>
                 </div>
 
+                <!--below is former tags-->
                 <!-- <span class="post-list__meta&#45;&#45;tags tags">{{ post.tags | join:' ' }}</span>-->
-                <a href="/tags">
-                    <div class="post-list-icon-mate">
-                        <span class="post-list__meta--tags-right">{{ post.tags }}</span>
-                    </div>
+
 
                     <div>
                         <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
