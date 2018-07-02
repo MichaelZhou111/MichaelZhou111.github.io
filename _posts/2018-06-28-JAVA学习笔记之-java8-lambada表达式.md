@@ -6,7 +6,7 @@ tags: JAVA笔记    lambada    函数式编程    闭包
 
 ---
 
-## 一：java8新特性--> lambada表达式
+## 一：lambada表达式
 >说起java8的新特性，很多人第一反应都是lambada表达式和流式的API，那么到底什么是lambada表达式，为什么要引入lambada表达式，以及引入lambada表达式为
 >java8带来了哪些改变呢，本文接来下会一一讨论。
  
@@ -22,7 +22,8 @@ Runnable r = new Runnable() {
 ```
 这段代码使用了匿名类，Runnable 是一个接口，这里new 了一个类实现了 Runnable 接口，然后重写了 run方法，run方法没有参数，方法体也只有一行打印语句。
 这段代码我们其实只关心中间打印的语句，其他都是多余的。
-java8后，我们采用lambada表达式后，我们就可以简写为：：
+java8后，我们采用lambada表达式后，我们就可以简写为：
+
 ```java
 Runnable r = () -> System.out.println("Hello");
 ```
@@ -139,29 +140,33 @@ public interface Consumer<T> {
  
  >参考链接: [Java 8函数式接口functional interface的秘密](http://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/ 'Java 8函数式接口functional interface的秘密')
  
- ### 2、Why: 为什么会有函数式接口?
+### 2、Why: 为什么会有函数式接口?
  说起函数式接口的起因就不得不提lambada表达式，说起lambada表达式的起因就不得不说函数式编程，函数式编程相比命令式编程有诸多的优点：（最突出的优点有2点：
  引用透明-->函数的运行部依赖于外部的状态；没有副作用-->函数的运行不改变外部的状态），java8为了使用函数式编程的优点，从而就使用了lambada表达式，从而
  就定义了一种规范和约束，这个规范和约束就是函数式接口。
  关于函数式编程的一些基础概念会在下面将。（注意：函数式编程和函数式接口是不同的概念。函数式编程是一种编程范式，与之在同一个维度的有：命令式编程、逻辑式编程）
  
 ### 3、What: java8里面的函数式接口都有哪些？
+
 #### JDK8 之前已经有的函数式接口
 * java.lang.Runnable
 * java.util.concurrent.callable
 * java.awt.event.ActionListener
 这里就列举这几个，还有其他的暂时就不列举了。  
+
 #### JDK8 新定义的函数式接口
 |接口	|参数	|返回类型|	描述|
- | --------   | -----:   | :----: |:----: |
+| --------   | -----:   | :----: |:----: |
 |Predicate<T>	|T	|boolean	|用于判别一个对象。比如求一个人是否为男性|
- | Consumer<T>	 | T	 | void	 | 用于接收一个对象进行处理但没有返回，比如接收一个人并打印他的名字 | 
- | Function<T, R>	 | T	 | R	 | 转换一个对象为不同类型的对象 | 
- | Supplier<T> | 	None | 	T	 | 提供一个对象 | 
- | UnaryOperator<T> | 	T	 | T	 | 接收对象并返回同类型的对象 | 
- | BinaryOperator<T>	 | (T, T)	 | T | 	接收两个同类型的对象，并返回一个原类型对象 | 
+| Consumer<T>	 | T	 | void	 | 用于接收一个对象进行处理但没有返回，比如接收一个人并打印他的名字 | 
+| Function<T, R>	 | T	 | R	 | 转换一个对象为不同类型的对象 | 
+| Supplier<T> | 	None | 	T	 | 提供一个对象 | 
+| UnaryOperator<T> | 	T	 | T	 | 接收对象并返回同类型的对象 | 
+| BinaryOperator<T>	 | (T, T)	 | T | 	接收两个同类型的对象，并返回一个原类型对象 | 
+
 > + 其中 Cosumer 与 Supplier 对应，一个是消费者，一个是提供者。
 > + Predicate 用于判断对象是否符合某个条件，经常被用来过滤对象。
 > + Function 是将一个对象转换为另一个对象，比如说要装箱或者拆箱某个对象。
 > + UnaryOperator 接收和返回同类型对象，一般用于对对象修改属性。BinaryOperator 则可以理解为合并对象。
+
 如果以前接触过一些其他 Java 框架，比如 Google Guava，可能已经使用过这些接口，对这些东西并不陌生。
