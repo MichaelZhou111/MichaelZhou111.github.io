@@ -133,14 +133,15 @@ public interface Consumer<T> {
  <!-- ![java.util.function.Consummer](/images/posts/Java.util.function.Consummer.png) -->
  
  最后才了解了原因在于：函数式接口中除了那个抽象方法外还可以包含静态方法和默认方法。
- Java 8以前的规范中接口中不允许定义静态方法。 静态方法只能在类中定义。 Java 8中可以定义静态方法。
+ + Java 8以前的规范中接口中不允许定义静态方法。 静态方法只能在类中定义。 Java 8中可以定义静态方法。
  一个或者多个静态方法不会影响SAM接口成为函数式接口。
- Java 8中允许接口实现方法， 而不是简单的声明， 这些方法叫做默认方法，使用特殊的关键字default。
+ + Java 8中允许接口实现方法， 而不是简单的声明， 这些方法叫做默认方法，使用特殊的关键字default。
  因为默认方法不是抽象方法，所以不影响我们判断一个接口是否是函数式接口。
  
  >参考链接: [Java 8函数式接口functional interface的秘密](http://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/ 'Java 8函数式接口functional interface的秘密')
  
- ### 2、Brief introduction: 函数式接口简介
+ 
+### 2、Brief introduction: 函数式接口简介
  为什么会单单从接口中定义出此类接口呢？ 
  原因是在Java Lambda的实现中， 开发组不想再为Lambda表达式单独定义一种特殊的Structural函数类型，
  称之为箭头类型（arrow type）， 依然想采用Java既有的类型系统(class, interface, method等)， 原因是增加一个结构化的函数类型会增加函数类型的复杂性，
@@ -209,7 +210,7 @@ public interface Consumer<T> {
 + Scala
 + Smalltalk, Ruby
 
-### 3、概念的不同！
+### 3、“函数”概念的不同！
 函数式编程中的函数，这个术语不是指命令式编程中的函数，而是指数学中的函数，即自变量的映射（一种东西和另一种东西之间的对应关系）。
 也就是说，一个函数的值仅决定于函数参数的值，不依赖其他状态。
 
@@ -231,7 +232,7 @@ public interface Consumer<T> {
 
 没有可变的状态，函数就是引用透明（Referential transparency）
 
-####4.2 没有副作用（No Side Effect）
+#### 4.2 没有副作用（No Side Effect）
  副作用（side effect），指的是函数内部与外部互动（最典型的情况，就是修改全局变量的值），产生运算以外的其他结果。
  
  函数式编程强调没有”副作用”，意味着函数要保持独立，所有功能就是返回一个新的值，没有其他行为，尤其是不得修改外部变量的值。
@@ -252,3 +253,5 @@ public interface Consumer<T> {
 
 这样就可以通过避免不必要的求值提升性能。
  
+ 
+ 总而言之，函数式编程由于其不依赖、不改变外部状态的基本特性，衍生出了很多其他的有点，尤其简化了多线程的复杂性，提升了高并发编程的可靠性。
