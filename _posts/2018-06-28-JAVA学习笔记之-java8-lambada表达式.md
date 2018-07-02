@@ -255,3 +255,8 @@ public interface Consumer<T> {
  
  
  总而言之，函数式编程由于其不依赖、不改变外部状态的基本特性，衍生出了很多其他的有点，尤其简化了多线程的复杂性，提升了高并发编程的可靠性。
+ 
+ ### 参考资源
+ * [Java 8函数式接口functional interface的秘密](http://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/) 
+ * [函数式编程介绍](https://blog.csdn.net/u013007900/article/details/79104110) 
+ * [深入浅出 Java 8 Lambda 表达式](http://blog.oneapm.com/apm-tech/226.html)
