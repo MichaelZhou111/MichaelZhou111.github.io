@@ -7,7 +7,7 @@ tags: JAVA笔记    lambada    函数式编程    闭包
 ---
 
 ## 一：java8新特性--> lambada表达式
->说起java8的新特性，很多人第一反应都是lambada表达式，那么到底什么是lambada表达式，为什么要引入lambada表达式，以及引入lambada表达式为
+>说起java8的新特性，很多人第一反应都是lambada表达式和流式的API，那么到底什么是lambada表达式，为什么要引入lambada表达式，以及引入lambada表达式为
 >java8带来了哪些改变呢，本文接来下会一一讨论。
  
 ### 1. Definition: 什么是lambada表达式？
@@ -20,11 +20,51 @@ Runnable r = new Runnable() {
   }
 };
 ```
-java8后，我们采用lambada表达式后，可以这么写：
+这段代码使用了匿名类，Runnable 是一个接口，这里new 了一个类实现了 Runnable 接口，然后重写了 run方法，run方法没有参数，方法体也只有一行打印语句。
+这段代码我们其实只关心中间打印的语句，其他都是多余的。
+java8后，我们采用lambada表达式后，我们就可以简写为：：
 ```java
 Runnable r = () -> System.out.println("Hello");
 ```
 
+Lambda 表达式是一种匿名函数(对 Java 而言这并不完全正确，但现在姑且这么认为)，简单地说，它是没有声明的方法，也即没有访问修饰符、返回值声明和名字。
+
+你可以将其想做一种速记，在你需要使用某个方法的地方写上它。当某个方法只使用一次，而且定义很简短，使用这种速记替代之尤其有效，这样，你就不必在类中费力写声明与方法了。
+
+### 2. lambaba表达式的语法
+lambda 表达式的语法格式如下：
+> (parameters) -> expression
+  或
+  (parameters) ->{ statements; }
+  
+*  一个 Lambda 表达式可以有零个或多个参数
+*  参数的类型既可以明确声明，也可以根据上下文来推断。例如：(int a)与(a)效果相同
+*  所有参数需包含在圆括号内，参数之间用逗号相隔。例如：(a, b) 或 (int a, int b) 或 (String a, int b, float c)
+*  空圆括号代表参数集为空。例如：() -> 42
+*  当只有一个参数，且其类型可推导时，圆括号（）可省略。例如：a -> return a*a
+*  Lambda 表达式的主体可包含零条或多条语句
+*  如果 Lambda 表达式的主体只有一条语句，花括号{}可省略。匿名函数的返回类型与该主体表达式一致
+*  如果 Lambda 表达式的主体包含一条以上语句，则表达式必须包含在花括号{}中（形成代码块）。匿名函数的返回类型与代码块的返回类型一致，若没有返回则为空
+
+以下是lambada表达式的一些例子：
+```java
+(int a, int b) -> {  return a + b; }
+
+() -> System.out.println("Hello World");
+
+(String s) -> { System.out.println(s); }
+
+() -> 42
+
+() -> { return 3.1415 };
+
+```
+### 3. 为什么java 会需要lambada 表达式？
+Java 是一流的面向对象语言，除了部分简单数据类型，Java 中的一切都是对象，即使数组也是一种对象，每个类创建的实例也是对象。
+在 Java 中定义的函数或方法不可能完全独立，也不能将方法作为参数或返回一个方法给实例。
+
+在Java的面向对象的世界里面，“抽象”是对数据的抽象，而“函数式编程”是对行为进行抽象，在现实世界中，数据和行为并存，程序也是如此。
+所以java8中lambada表达式的出现也就弥补java在对行为进行抽象方面的缺失。
 
 
 ## 二：函数式接口
@@ -59,8 +99,37 @@ public interface Runnable {
 <!--  ![Runnable](/images/posts/Runnable.png) -->
 
 #### java.util.function.Consummer:
+```java
+@FunctionalInterface
+public interface Consumer<T> {
+
+    /**
+     * Performs this operation on the given argument.
+     *
+     * @param t the input argument
+     */
+    void accept(T t);
+
+    /**
+     * Returns a composed {@code Consumer} that performs, in sequence, this
+     * operation followed by the {@code after} operation. If performing either
+     * operation throws an exception, it is relayed to the caller of the
+     * composed operation.  If performing this operation throws an exception,
+     * the {@code after} operation will not be performed.
+     *
+     * @param after the operation to perform after this operation
+     * @return a composed {@code Consumer} that performs in sequence this
+     * operation followed by the {@code after} operation
+     * @throws NullPointerException if {@code after} is null
+     */
+    default Consumer<T> andThen(Consumer<? super T> after) {
+        Objects.requireNonNull(after);
+        return (T t) -> { accept(t); after.accept(t); };
+    }
+}
+```
  
-  ![java.util.function.Consummer](/images/posts/Java.util.function.Consummer.png)
+ <!-- ![java.util.function.Consummer](/images/posts/Java.util.function.Consummer.png) -->
  
  最后才了解了原因在于：函数式接口中除了那个抽象方法外还可以包含静态方法和默认方法。
  Java 8以前的规范中接口中不允许定义静态方法。 静态方法只能在类中定义。 Java 8中可以定义静态方法。
@@ -83,3 +152,16 @@ public interface Runnable {
 * java.awt.event.ActionListener
 这里就列举这几个，还有其他的暂时就不列举了。  
 #### JDK8 新定义的函数式接口
+|接口	|参数	|返回类型|	描述|
+ | --------   | -----:   | :----: |:----: |
+|Predicate<T>	|T	|boolean	|用于判别一个对象。比如求一个人是否为男性|
+ | Consumer<T>	 | T	 | void	 | 用于接收一个对象进行处理但没有返回，比如接收一个人并打印他的名字 | 
+ | Function<T, R>	 | T	 | R	 | 转换一个对象为不同类型的对象 | 
+ | Supplier<T> | 	None | 	T	 | 提供一个对象 | 
+ | UnaryOperator<T> | 	T	 | T	 | 接收对象并返回同类型的对象 | 
+ | BinaryOperator<T>	 | (T, T)	 | T | 	接收两个同类型的对象，并返回一个原类型对象 | 
+> + 其中 Cosumer 与 Supplier 对应，一个是消费者，一个是提供者。
+> + Predicate 用于判断对象是否符合某个条件，经常被用来过滤对象。
+> + Function 是将一个对象转换为另一个对象，比如说要装箱或者拆箱某个对象。
+> + UnaryOperator 接收和返回同类型对象，一般用于对对象修改属性。BinaryOperator 则可以理解为合并对象。
+如果以前接触过一些其他 Java 框架，比如 Google Guava，可能已经使用过这些接口，对这些东西并不陌生。
