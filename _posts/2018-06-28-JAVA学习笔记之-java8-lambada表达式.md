@@ -8,7 +8,8 @@ tags: JAVA笔记    lambada    函数式编程    闭包
 
 ## java8新特性--> lambada表达式
 >说起java8的新特性，很多人第一反应都是lambada表达式，那么到底什么是lambada表达式，为什么要引入lambada表达式，以及引入lambada表达式为
- java8带来了哪些改变呢，本文接来下会一一讨论。
+>java8带来了哪些改变呢，本文接来下会一一讨论。
+ 
 ### 1. Definition: 什么是lambada表达式？
 直白的先让大家有个第一印象，在java8之前，在创建一个线程的时候，我们可能这么写：
 ```java
@@ -34,10 +35,13 @@ Runnable r = () -> System.out.println("Hello");
  首次看到这个概念的时候，有些迷茫。因为接口中的方法都是public abstract 的（即便省略掉这两个关键字也是ok的，接口中每一个方法也是隐式抽象的,接口中的方法会被隐式的指定为 public abstract（只能是 public abstract，其他修饰符都会报错）），那么上面的定义就变成了：只有一个方法声明的接口就是函数式接口。
  但是实际上在代码中看到的函数式接口有包含一个方法的，也有包含多个方法的，这就让我迷茫了。
  例如下面的两个函数式接口：Runnable 和 Consummer:
-#####Runnable:
+ 
+####Runnable:
+
  ![Runnable](/images/posts/Runnable.png)
 
- ##### java.util.funciton.Consummer:
+ #### java.util.funciton.Consummer:
+ 
   ![java.util.function.Consummer](/images/posts/Java.util.function.Consummer.png)
  
  最后才了解了原因在于：函数式接口中除了那个抽象方法外还可以包含静态方法和默认方法。
