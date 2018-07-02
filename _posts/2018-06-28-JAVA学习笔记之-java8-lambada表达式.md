@@ -37,8 +37,26 @@ Runnable r = () -> System.out.println("Hello");
  例如下面的两个函数式接口：Runnable 和 Consummer:
  
 #### Runnable:
+```java
+@FunctionalInterface
+public interface Runnable {
+    /**
+     * When an object implementing interface <code>Runnable</code> is used
+     * to create a thread, starting the thread causes the object's
+     * <code>run</code> method to be called in that separately executing
+     * thread.
+     * <p>
+     * The general contract of the method <code>run</code> is that it may
+     * take any action whatsoever.
+     *
+     * @see     java.lang.Thread#run()
+     */
+    public abstract void run();
+}
 
- ![Runnable](/images/posts/Runnable.png)
+```
+
+<!--  ![Runnable](/images/posts/Runnable.png) -->
 
 #### java.util.function.Consummer:
  
