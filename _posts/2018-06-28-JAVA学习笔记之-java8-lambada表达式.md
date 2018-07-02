@@ -6,7 +6,7 @@ tags: JAVA笔记    lambada    函数式编程    闭包
 
 ---
 
-## java8新特性--> lambada表达式
+## 一：java8新特性--> lambada表达式
 >说起java8的新特性，很多人第一反应都是lambada表达式，那么到底什么是lambada表达式，为什么要引入lambada表达式，以及引入lambada表达式为
 >java8带来了哪些改变呢，本文接来下会一一讨论。
  
@@ -27,7 +27,7 @@ Runnable r = () -> System.out.println("Hello");
 
 
 
-## 函数式接口
+## 二：函数式接口
 ### 1、Definition: 什么是函数式接口？
 函数式接口(Functional Interface)是Java 8对一类特殊类型的接口的称呼。 这类接口只定义了唯一的抽象方法的接口（除了隐含的Object对象的公共方法），
  因此最开始也就做SAM类型的接口（Single Abstract Method）。
@@ -36,11 +36,11 @@ Runnable r = () -> System.out.println("Hello");
  但是实际上在代码中看到的函数式接口有包含一个方法的，也有包含多个方法的，这就让我迷茫了。
  例如下面的两个函数式接口：Runnable 和 Consummer:
  
-####Runnable:
+#### Runnable:
 
  ![Runnable](/images/posts/Runnable.png)
 
- #### java.util.funciton.Consummer:
+#### java.util.function.Consummer:
  
   ![java.util.function.Consummer](/images/posts/Java.util.function.Consummer.png)
  
