@@ -99,7 +99,7 @@
                     type: 'POST',
                     dataType: "json",
                     //async: false, //jquery3中可以直接使用回调函数，不用再指定async
-                    url: "http://api.ipstack.com/check?access_key=2b08120c6e113f980c25934aae2137b5"
+                    url: "http://api.ipstack.com/check?access_key=2b08120c6e113f980c25934aae2137b5&fields=ip&output=json"
                 };
                 $.ajax(options)
                     .done(function(data, textStatus, jqXHR) {
