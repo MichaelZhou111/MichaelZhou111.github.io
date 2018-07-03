@@ -9,6 +9,12 @@
         <!--获取ip的api-->
         <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
         <script>AV.initialize("7f1h6TTDyH8x6gvCG5XV32bi-gzGzoHsz", "9gVoQ5eKkXCrWiRpEC9TI4Q1");</script>
+
+        <script type="text/javascript">
+            var ip = returnCitySN["cip"];
+            console.log("this is my ip :"+ip);
+        </script>
+
         <script>
             //新增访问次数
             function addCount(Counter) {
@@ -116,8 +122,6 @@
 
             //调用API获取IP
             function getVisitorIpAndJudge() {
-                var ip =returnCitySN["cip"];
-                console.log("this is my ip address=="+ip);
                 judgeVisitor(ip);
             }
 
