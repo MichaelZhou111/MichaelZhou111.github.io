@@ -6,6 +6,8 @@
         <!--访问LeanCloud的js包装脚本-->
         <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
         <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+        <!--获取ip的api-->
+        <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
         <script>AV.initialize("7f1h6TTDyH8x6gvCG5XV32bi-gzGzoHsz", "9gVoQ5eKkXCrWiRpEC9TI4Q1");</script>
         <script>
             //新增访问次数
@@ -92,12 +94,14 @@
                 });
             }
 
-            //调用API获取IP
+            /*//调用API获取IP
+            // freegeoip.net/json/?callback=?  这种方式已经不能用了，原代码参考：https://priesttomb.github.io/%E6%97%A5%E5%B8%B8/2017/11/06/jekyll%E4%BD%BF%E7%94%A8LeanCloud%E8%AE%B0%E5%BD%95%E6%96%87%E7%AB%A0%E7%9A%84%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/
+            // 修改为新的api:api.ipstack.com  ，由于https的限制，仍然无法使用，且免费的api的使用期只有一个月
             function getVisitorIpAndJudge() {
                 var ip;
                 var options = {
                     type: 'POST',
-                    dataType: "json",
+                    dataType: "jsonp",
                     //async: false, //jquery3中可以直接使用回调函数，不用再指定async
                     url: "http://api.ipstack.com/check?access_key=2b08120c6e113f980c25934aae2137b5&fields=ip&output=json"
                 };
@@ -108,6 +112,13 @@
                         }
                         judgeVisitor(ip)
                     });
+            }*/
+
+            //调用API获取IP
+            function getVisitorIpAndJudge() {
+                var ip =returnCitySN["cip"];
+                console.log("this is my ip address=="+ip);
+                judgeVisitor(ip);
             }
 
             //判断访客是否已访问过该文章，及访问时间，符合条件则增加一次访问次数
