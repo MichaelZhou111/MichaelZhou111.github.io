@@ -52,5 +52,3 @@ leancloud:
   enable: true
   app_id: 7f1h6TTDyH8x6gvCG5XV32bi-gzGzoHsz
   app_key: 9gVoQ5eKkXCrWiRpEC9TI4Q1
-
-theme: jekyll-theme-cayman
