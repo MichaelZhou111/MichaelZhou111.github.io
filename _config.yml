@@ -1,54 +1,125 @@
-# Basic
-title: Michael Zhou's Blog
-subtitle: 一个测试行业从业人员的点滴感悟
-welcome_message: <a href="https://github.com/MichaelZhou111?tab=stars" target="_blank">My GitHub Stars</a>
-description: 测试开发 &nbsp&nbsp  接口自动化测试  &nbsp&nbsp 自动化测试框架开发
-creator: <a href="http://onev.cat">@onevcat</a>
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://mazhuang.org
+date_format: "ordinal"
+title: 码志
+subtitle: "打码改变人生"
+description: "马壮的个人博客"
+keywords: 码志, Zhuang Ma, mzlogin, mazhuang
+timezone: Asia/Shanghai
+encoding: "utf-8"
+side_bar_repo_limit: 5
 
-url: "http://vno.onevcat.com"
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Zhuang Ma
+organization:
+organization_url:
+github_username: mzlogin
+location: Wuhan, China
+email: chumpma@gmail.com
 
-permalink: /:year/:month/:title/
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
 
-# Format
+  -
+    href: /categories/
+    label: 分类
+
+#   -
+#     href: /archives/
+#     label: 归档
+
+  -
+    href: /wiki/
+    label: 维基
+
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
 highlighter: rouge
-
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: blue
-
-# The blog button should not be removed.
-blog_button:
-    title: 欢迎来到我的个人博客~
-    description: Visit blog
-
-# Navigation buttons in the front page.
-#nav:
-    #- {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
-
-# Pagination
-gems: [jekyll-paginate]
 paginate: 10
-paginate_path: "page/:num/"
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
-# Comment
-comment:
-    disqus: michaelzhou111
-    # duoshuo:
+repository: mzlogin/mzlogin.github.io
 
-# Social
-social:
-    #weibo: onevcat
-    #github: onevcat
-    #twitter: onevcat
-    #gplus: 107108267983477358170
-    mail: zhouzhiping@jd.com
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username:
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: mzlogin
+    repo: blog-comments
+    oauth:
+        client_id: d2e1cbbd298958076462
+        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: mzlogin
+    repo: blog-comments
+    clientID: d2e1cbbd298958076462
+    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
 
-# Google Analytics
-ga:
-    id: UA-119022278-1
-    host: MyBlog
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
 
-leancloud:
-  enable: true
-  app_id: 7f1h6TTDyH8x6gvCG5XV32bi-gzGzoHsz
-  app_key: 9gVoQ5eKkXCrWiRpEC9TI4Q1
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1
