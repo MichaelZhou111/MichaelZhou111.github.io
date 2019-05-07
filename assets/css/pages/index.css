@@ -1,8 +1,9 @@
 .home .banner,
 .home .site-header {
     /*background: #4183c4;*/
-    background: #2196f3;
-    color: #fff
+  /*  background: #2196f3;
+    color: #fff*/
+    background-image: url("/assets/images/background-cover.jpg");
 }
 
 .home .banner .collection-head {
