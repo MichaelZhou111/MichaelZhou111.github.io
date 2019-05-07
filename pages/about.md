@@ -1,14 +1,14 @@
 ---
 layout: page
-title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+title: 关于我自己
+description: I am my own God~!
+keywords: Michael Zhou
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是Michael Zhou, 一个测试行业的从业人员。
 
 仰慕「优雅编码的艺术」。
 
