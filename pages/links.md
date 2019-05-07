@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Links
+title: 独乐乐，不如众乐乐
 description: 没有链接的博客是孤独的
 keywords: 友情链接
 comments: true
