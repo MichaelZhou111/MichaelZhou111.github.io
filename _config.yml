@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://michaelzhou111.github.io/
+url: https://michaelzhou111.github.io
 date_format: "ordinal"
 title: Michael Zhou's Blog
 subtitle: "一个测试行业从业人员的点滴感悟"
@@ -18,7 +18,7 @@ side_bar_repo_limit: 5
 author: Michael Zhou
 organization:
 organization_url:
-github_username: michaelzhou111
+github_username: MichaelZhou111
 location: Beijing, China
 email: zhouzhiping.michael@gmail.com
 
@@ -40,7 +40,7 @@ navs:
 
   -
     href: /wiki/
-    label: 维基
+    label: 技能字典
 
   -
     href: /links/
@@ -94,6 +94,7 @@ comments_provider: gitalk
 disqus:
     username: michaelzhou111
 # https://imsun.net/posts/gitment-introduction/
+# i do not use gitment for now
 gitment:
     owner: mzlogin
     repo: blog-comments
@@ -103,7 +104,7 @@ gitment:
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: MichaelZhou111
-    repo: blog-comments
+    repo: MichaelBlogOAuthApp
     clientID: 16cde2922493f9824e7b
     clientSecret: e6d14bdd515afc130bcfb3f801b4d512bdbecc78
 # 在使用其它评论组件时可点击显示 Disqus
