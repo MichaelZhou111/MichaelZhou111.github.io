@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 这些概念你不懂的话，你好意思说你懂java?
-date:  2018-06-29 11:15:06
-tags: JAVA笔记    lambada    函数式编程 
+date:  2018-06-29
+categories: java 笔记
+description: java8的lambada表达式
+keywords: java, 笔记, lambada
 
 ---
 
