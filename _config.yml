@@ -104,7 +104,7 @@ gitment:
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: MichaelZhou111
-    repo: MichaelBlogOAuthApp
+    repo: michaelzhou111.github.io
     clientID: 16cde2922493f9824e7b
     clientSecret: e6d14bdd515afc130bcfb3f801b4d512bdbecc78
 # 在使用其它评论组件时可点击显示 Disqus
