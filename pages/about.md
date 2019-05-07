@@ -8,6 +8,8 @@ menu: 关于
 permalink: /about/
 ---
 
+> For the ideal that I hold dear to my heart, I'd not regret a thousand times to die.
+
 我是Michael Zhou, 一个测试行业的从业人员。
 
 仰慕「优雅编码的艺术」。

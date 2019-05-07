@@ -8,6 +8,8 @@ menu: 分类
 permalink: /categories/
 ---
 
+> Birds of a feather flock together.
+
 <section class="container posts-content">
 {% assign sorted_categories = site.categories | sort %}
 {% for category in sorted_categories %}
