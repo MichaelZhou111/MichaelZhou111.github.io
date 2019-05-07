@@ -10,7 +10,8 @@ layout: default
         <div class="collection-info">
           {% if page.date %}
           <span class="meta-info">
-            <span class="octicon octicon-calendar"></span> {{ page.date | date: "%Y/%m/%d" }}
+            <!--<span class="octicon octicon-calendar"></span>-->
+              <img src="/images/calendar.png" width="20px"/>{{ page.date | date: "%Y/%m/%d" }}
           </span>
           {% endif %}
           {% for cat in page.categories %}
@@ -21,6 +22,7 @@ layout: default
           {% endfor %}
 
           {% if site.leancloud.enable %}
+            <img src="/images/binoculars.png" width="20px"/>
             <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
                 Visited:<a href="#"><span class="leancloud-visitors-count"></span>次</a>
             </span>
