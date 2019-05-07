@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://mazhuang.org
+url: https://michaelzhou111.github.io/
 date_format: "ordinal"
-title: 码志
-subtitle: "打码改变人生"
-description: "马壮的个人博客"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang
+title: Michael Zhou's Blog
+subtitle: "一个测试行业从业人员的点滴感悟"
+description: "Michael Zhou's personal blog"
+keywords: 测试开发,自动化测试,工程效率
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -15,12 +15,12 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: Michael Zhou
 organization:
 organization_url:
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+github_username: michaelzhou111
+location: Beijing, China
+email: zhouzhiping.michael@gmail.com
 
 # ---------------- #
 #    Navigation    #
@@ -92,7 +92,7 @@ comments_provider: gitalk
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username:
+    username: michaelzhou111
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: mzlogin
@@ -102,10 +102,10 @@ gitment:
         client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: mzlogin
+    owner: MichaelZhou111
     repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+    clientID: 16cde2922493f9824e7b
+    clientSecret: e6d14bdd515afc130bcfb3f801b4d512bdbecc78
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
@@ -122,4 +122,4 @@ simple_jekyll_search:
 #    Analytics     #
 # ---------------- #
 google:
-    analytics_id: UA-80669434-1
+    analytics_id: UA-119022278-1
