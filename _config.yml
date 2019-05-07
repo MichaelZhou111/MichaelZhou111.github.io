@@ -124,3 +124,8 @@ simple_jekyll_search:
 # ---------------- #
 google:
     analytics_id: UA-119022278-1
+
+leancloud:
+  enable: true
+  app_id: 7f1h6TTDyH8x6gvCG5XV32bi-gzGzoHsz
+  app_key: 9gVoQ5eKkXCrWiRpEC9TI4Q1
