@@ -45,6 +45,9 @@ navs:
   -
     href: /links/
     label: 链接
+  -
+    href: /favorite/
+    label: 收藏
 
   -
     href: /about/
