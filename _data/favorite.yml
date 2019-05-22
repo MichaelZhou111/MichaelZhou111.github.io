@@ -1,11 +1,11 @@
-favos:
-    - favorites: Code Review (代码评审)
-        - name: name1
-           url: http://www.baidu.com
-        - name: name2
-           url: http://www.jd.com
-    - favorites: Unit Testing (单元测试)
-        - name: name1
-           url: http://www.baidu.com
-        - name: name2
-           url: http://www.jd.com
+- favo: 单元测试
+  name: MichaelZhou's Blog
+  url: https://michaelzhou111.github.io/
+
+- favo: 单元测试
+  name: MichaelZhou's Blog
+  url: https://michaelzhou111.github.io/
+
+- favo: 单元测试2
+  name: MichaelZhou's Blog
+  url: https://michaelzhou111.github.io/
