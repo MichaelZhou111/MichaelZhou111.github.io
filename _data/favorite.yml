@@ -1,14 +1,11 @@
-- favorites: Code Review (代码评审)
-  - name: MichaelZhou's Blog
-    url: https://michaelzhou111.github.io/
-
-  - name: 当然我在扯淡[ 王垠的博客]
-    url: http://www.yinwang.org/
-
-  - name: 酷壳 -CoolShell - 左耳朵耗子（陈皓）的个人博客
-    url: https://coolshell.cn/
-
-
-- favorites: Unit Testing (单元测试)
-  - name: MichaelZhou's Blog
-    url: https://michaelzhou111.github.io/
+favos:
+    - favorites: Code Review (代码评审)
+        - name: name1
+           url: http://www.baidu.com
+        - name: name2
+           url: http://www.jd.com
+    - favorites: Unit Testing (单元测试)
+        - name: name1
+           url: http://www.baidu.com
+        - name: name2
+           url: http://www.jd.com
