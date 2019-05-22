@@ -1,13 +1,10 @@
-- favo: 单元测试
-   - links:
-      - name: MichaelZhou's Blog
-        url: https://michaelzhou111.github.io/
-      - name: xxname
-         url: http://xxx
-
-- favo: 单元测试2
-   - links:
-      - name: MichaelZhou's Blog
-        url: https://michaelzhou111.github.io/
-      - name: xxname
-         url: http://xxx
+- favo:
+    - cat: 单元测试
+      name: MichaelZhou's Blog
+      url: https://michaelzhou111.github.io/
+    - cat: 单元测试
+      name: MichaelZhou's Blog1
+      url: https://michaelzhou111.github.io/
+    - cat: 单元测试2
+      name: name2
+      url: http://www.baidu.com

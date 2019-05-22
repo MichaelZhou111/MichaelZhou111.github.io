@@ -11,10 +11,10 @@ permalink: /favorite/
 > If I have been able to see further, it was only because I stood on the shoulders of giants.
 
 <section class="container posts-content">
-{% assign sorted_favo = site.favo | sort %}
-{% for favo in sorted_favo %}
+{% assign sorted_favo = site.favo.cat | sort %}
+{% for single in sorted_favo %}
 
-{% for link in site.favo.links %}
+{% for link in single %}
 * [{{ link.name }}]({{ link.url }})
 {% endfor %}
 
