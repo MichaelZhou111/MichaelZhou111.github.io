@@ -10,16 +10,7 @@ permalink: /favorite/
 
 > If I have been able to see further, it was only because I stood on the shoulders of giants. - Newton
 
-<section class="container posts-content">
-{% assign sorted_favorites = site.favorites | sort %}
-{% for favor in sorted_favorites %}
-<h3>{{ favor | first }}</h3>
-<ol class="posts-list" id="{{ favor[0] }}">
-{% for link in favor.last %}
+{% for link in site.data.links %}
 * [{{ link.name }}]({{ link.url }})
-</li>
 {% endfor %}
-</ol>
-{% endfor %}
-</section>
-<!-- /section.content -->
+
