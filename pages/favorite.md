@@ -13,7 +13,7 @@ permalink: /favorite/
 <section class="container posts-content">
 <div>
     <h3>代码评审 Code Review</h3>
-    <p> 我提交了一段代码，却没人给我 review，稍后我自己给自己 review 了，得到了一段更好的代码和一个更好的自己。</h5>
+    <small> 我提交了一段代码，却没人给我 review，稍后我自己给自己 review 了，得到了一段更好的代码和一个更好的自己。</small>
     <ul>
         <li> <a href="https://zhuanlan.zhihu.com/p/21478902" target="_blank" /> Code Review 程序员的寄望与哀伤</li>
         <li> <a href="https://coolshell.cn/articles/11432.html" target="_blank" />从CODE REVIEW 谈如何做技术</li>
@@ -22,7 +22,7 @@ permalink: /favorite/
 
 <div>
     <h3>职业发展</h3>
-    <p> 芝兰生于空谷，不以无人而不芳！君子修身养道，不以穷困而改志！ </h5>
+    <small> 芝兰生于空谷，不以无人而不芳！君子修身养道，不以穷困而改志！ </small>
     <ul>
         <li> <a href="https://coolshell.cn/articles/17583.html" target="_blank" />技术人员的发展之路</li>
         <li> <a href="https://coolshell.cn/articles/10688.html" target="_blank"/>编程能力与编程年龄</li>
