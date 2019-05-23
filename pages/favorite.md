@@ -24,6 +24,7 @@ permalink: /favorite/
     <ul>
         <li> <a href="https://coolshell.cn/articles/17583.html" target="_blank" >技术人员的发展之路 </a></li>
         <li> <a href="https://coolshell.cn/articles/10688.html" target="_blank" >编程能力与编程年龄 </a></li>
+        <li> <a href="https://coolshell.cn/articles/10217.html" target="_blank" >加班与效率 </a></li>
     </ul>
 
 </section>
