@@ -18,9 +18,6 @@ permalink: /favorite/
         <li> <a href="https://zhuanlan.zhihu.com/p/21478902" target="_blank" /> Code Review 程序员的寄望与哀伤</li>
         <li> <a href="https://coolshell.cn/articles/11432.html" target="_blank" />从CODE REVIEW 谈如何做技术</li>
     </ul>
-</div>
-
-<div>
     <h3>职业发展</h3>
     <small> 芝兰生于空谷，不以无人而不芳！君子修身养道，不以穷困而改志！ </small>
     <ul>
